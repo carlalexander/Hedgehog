@@ -1,0 +1,40 @@
+{
+    "name": "carlalexander/hedgehog",
+    "description": "A micro-framework for WordPress",
+    "keywords": ["microframework", "wordpress"],
+    "authors": [
+        {
+            "name": "Carl Alexander",
+            "email": "carlalexander@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "Hedgehog": "src/" }
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "wordpress/wordpress",
+                "version": "3.4.2",
+                "dist": {
+                    "url": "http://wordpress.org/wordpress-3.4.2.zip",
+                    "type": "zip"
+                }
+            }
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "pimple/pimple": "1.*",
+        "symfony/http-foundation": ">=2.1,<2.3-dev",
+        "symfony/http-kernel": ">=2.1,<2.3-dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*",
+        "wordpress/wordpress": "3.4.*"
+    },
+    "config": {
+        "bin-dir": "bin"
+    }
+}
